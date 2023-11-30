@@ -1,0 +1,22 @@
+﻿
+
++---------------------+          +---------------------+          +---------------------+
+|        Order        |          |     OrderProduct    |          |       Product       |
++---------------------+          +---------------------+          +---------------------+
+| OrderId             |1       * | OrderItemId         |          | ProductId           |
+| CustomerId          +----------| OrderId             | *     1  | Name                |
+| OrderDate           |          | ProductId           +----------| Price               |
+| Status              |          | Quantity            |          | ...                 |
+| ...                 |          | ...                 |          +---------------------+
++---------------------+          +---------------------+
+
+Order - OrderITem: 1:N
+En order innehåller flera OrderItems men en specific OrderItem ingår bara i en
+order. 
+
+Order - Customer: 1:N 
+En order kan bara läggas av en kund men en kund kan lägga flera ordrar. 
+
+OrderProduct - Product 
+En orderProduct är bara kopplad en specifik produkt (den kan inte vara samma 
+produkter samtidigt).
